@@ -5,6 +5,7 @@ var mongojs = require('mongojs');
 
 //Set Static Folder
 app.use(express.static(__dirname+ '/public'));
+app.use(bodyParser.json());
 
 app.get('/', function(req, res){
   res.send('It works');
