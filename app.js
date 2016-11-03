@@ -21,5 +21,16 @@ app.get('/clients', function(req, res){
   });
 });
 
+app.post('/clients', function(req, res){
+  db.clients.insert(req.body, function(err, doc){
+    if(err){
+      res.send(err);
+    } else {
+      console.log('Client Added...');
+      res.json(doc);
+    }
+  });
+});
+
 app.listen(3000);
 console.log('Ready on port 3000');
