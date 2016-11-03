@@ -20,4 +20,11 @@ myApp.controller('AppCtrl', ['$scope', '$http', '$location', function($scope, $h
       
     });
   }
+
+  $scope.updateClient = function(){
+    $http.put('/clients/' + $scope.client._id, $scope.client).success(function(res){
+      console.log('Client updated...')
+      window.location.href = '/';
+    })
+  }
 }]);
