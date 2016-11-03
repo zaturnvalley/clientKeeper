@@ -11,7 +11,7 @@ app.use(bodyParser.json());
 app.get('/clients', function(req, res){
   console.log('Request for clients recieved...');
 
-  db.clients.find(function(err, docs){
+  db.clients.find().sort({last_name: 1},(function(err, docs){
     if(err){
       res.send(err);
     } else {
