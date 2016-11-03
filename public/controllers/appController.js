@@ -13,4 +13,8 @@ myApp.controller('AppCtrl', ['$scope', '$http', '$location', function($scope, $h
       window.location.href='/'
     });
   }
+  $scope.editClient = function(id){
+    $('#addBtn').remove();
+    $
+  }
 }]);

@@ -44,13 +44,14 @@
                       <td><input type="text" class="form-control" ng-model="client.email" name="email"></td>
                       <td><input type="text" class="form-control" ng-model="client.phone"  name="phone"></td>
                       <td><button id="addBtn" class="btn btn-primary" ng-click="addClient()">Add</button></td>
-                    </tr>
+                      <td><button id="updateBtn" class="btn btn-info" ng-click="updateClient()">Add</button></td>
+                      </tr>
                     <tr ng-repeat="client in clients">
                       <td>{{client.first_name}}</td>
                       <td>{{client.last_name}}</td>
                       <td>{{client.email}}</td>
                       <td>{{client.phone}}</td>
-                      <td><button class="btn btn-warning">Edit</button></td>
+                      <td><button class="btn btn-warning" ng-click="editClient(client._id)">Edit</button></td>
                       <td><button class="btn btn-danger">Delete</button></td>
                     </tr>
                   </tbody>
