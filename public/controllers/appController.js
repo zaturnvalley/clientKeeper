@@ -15,6 +15,9 @@ myApp.controller('AppCtrl', ['$scope', '$http', '$location', function($scope, $h
   }
   $scope.editClient = function(id){
     $('#addBtn').remove();
-    $
+    $http.get('/clients/' + id).success(function(res){
+      $scope.client = res;
+      
+    });
   }
 }]);
