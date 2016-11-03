@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html ng-app>
+<html ng-app="myApp">
 <head>
   <title>Client Keeper</title>
   <!-- Latest compiled and minified CSS & JS -->
@@ -10,7 +10,7 @@
   <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 
-<body>
+<body ng-controller="AppCtrl">
   <nav class="navbar navbar-inverse">
       <div class="container">
         <div class="navbar-header">
@@ -45,11 +45,11 @@
                       <td><input type="text" class="form-control" name="phone"></td>
                       <td><button id="addBtn" class="btn btn-primary">Add</button></td>
                     </tr>
-                    <tr>
-                      <td>John</td>
-                      <td>Smith</td>
-                      <td>johnsmith@jonestown.com</td>
-                      <td>555-555-5555</td>
+                    <tr ng-repeat="client in clients">
+                      <td>{{client.first_name}}</td>
+                      <td>{{client.last_name}}</td>
+                      <td>{{client.email</td>
+                      <td>{{client.phone}}</td>
                       <td><button class="btn btn-warning">Edit</button></td>
                       <td><button class="btn btn-danger">Delete</button></td>
                     </tr>
@@ -57,5 +57,6 @@
     </table>
   </div>
   <script type="text/javascript" src="/bower_components/angular/angular.js"></script>
+  <script type="text/javascript" src="/controllers/AppController.js"></script>
 </body>
 </html>
