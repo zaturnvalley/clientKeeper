@@ -8,6 +8,9 @@ myApp.controller('AppCtrl', ['$scope', '$http', '$location', function($scope, $h
 
   $scope.addClient = function(){
     console.log('Adding new client...');
-    
+    $http.post('/clients', $scope.client).success(function(res){
+      console.log('Client Added');
+      window.location.href='/'
+    });
   }
 }]);

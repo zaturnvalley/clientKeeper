@@ -39,10 +39,10 @@
                   </thead>
                   <tbody>
                     <tr>
-                      <td><input type="text" class="form-control" ng-model="first_name" name="first_name"></td>
-                      <td><input type="text" class="form-control" ng-model="last_name"  name="last_name"></td>
-                      <td><input type="text" class="form-control" ng-model="email" name="email"></td>
-                      <td><input type="text" class="form-control" ng-model="phone"  name="phone"></td>
+                      <td><input type="text" class="form-control" ng-model="client.first_name" name="first_name"></td>
+                      <td><input type="text" class="form-control" ng-model="client.last_name"  name="last_name"></td>
+                      <td><input type="text" class="form-control" ng-model="client.email" name="email"></td>
+                      <td><input type="text" class="form-control" ng-model="client.phone"  name="phone"></td>
                       <td><button id="addBtn" class="btn btn-primary" ng-click="addClient()">Add</button></td>
                     </tr>
                     <tr ng-repeat="client in clients">
