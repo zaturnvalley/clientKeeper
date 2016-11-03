@@ -5,4 +5,9 @@ myApp.controller('AppCtrl', ['$scope', '$http', '$location', function($scope, $h
     console.log('Data Received From Server');
     $scope.clients = res;
   });
+
+  $scope.addClient = function(){
+    console.log('Adding new client...');
+    
+  }
 }]);
