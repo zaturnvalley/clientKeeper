@@ -27,4 +27,10 @@ myApp.controller('AppCtrl', ['$scope', '$http', '$location', function($scope, $h
       window.location.href = '/';
     });
   }
+  $scope.deleteClient = function(id){
+    $http.delete('/clients/'+id).success(function(res){
+      console.log('Client removed...');
+      window.location.href = '/';
+    })
+  }
 }]);

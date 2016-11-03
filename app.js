@@ -61,5 +61,17 @@ app.put('/clients/:id', function(req,res){
   });
 });
 
+app.delete('/clients/:id', function(req, res){
+  var id = req.params.id;
+  db.clients.remove({_id: mongojs.ObjectId(id)}, function(err,doc){
+    if(err){
+      res.send(err);
+    } else {
+      console.log('Client Removed');
+      res.json(doc);
+    }
+  });
+});
+
 app.listen(3000);
 console.log('Ready on port 3000');

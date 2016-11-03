@@ -52,7 +52,7 @@
                       <td>{{client.email}}</td>
                       <td>{{client.phone}}</td>
                       <td><button class="btn btn-warning" ng-click="editClient(client._id)">Edit</button></td>
-                      <td><button class="btn btn-danger">Delete</button></td>
+                      <td><button ng-click="deleteClient(client._id)" class="btn btn-danger">Delete</button></td>
                     </tr>
                   </tbody>
     </table>
